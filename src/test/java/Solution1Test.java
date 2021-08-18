@@ -49,5 +49,16 @@ public class Solution1Test  {
         assertEquals(expected[0], result[0]);
         assertEquals(expected[1], result[1]);
     }
+    @Test
+    public void twoSumReturnZeroAndZeroWhenNoSummEqualsResult() {
+        int[] nums = new int[]{-2,0,-7,-11};
+        int target = 10;
+        int[] expected = new int[]{0,0};
+
+        int[] result = solution1.twoSum(nums, target);
+
+        assertEquals(expected[0], result[0]);
+        assertEquals(expected[1], result[1]);
+    }
 
 }
