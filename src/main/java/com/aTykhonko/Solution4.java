@@ -2,12 +2,8 @@ package com.aTykhonko;
 
 public class Solution4 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        double result;
         int medianArrayIndex = (nums1.length + nums2.length) / 2;
-        boolean isEven = false;
-        if ((nums1.length + nums2.length) % 2 == 0) {
-            isEven = true;
-        }
+        boolean isEven = (nums1.length + nums2.length) % 2 == 0;
         int indexFirst = 0;
         int indexSecond = 0;
         int indexTemp = 0;
@@ -34,11 +30,6 @@ public class Solution4 {
                 secondMedialNumberIfEvenArray = medianNumber;
             }
         }
-        if (isEven) {
-            result = (medianNumber + secondMedialNumberIfEvenArray) / 2.0;
-        } else {
-            result = medianNumber * 1.0;
-        }
-        return result;
+        return isEven ? (medianNumber + secondMedialNumberIfEvenArray) / 2.0 : medianNumber * 1.0;
     }
 }
